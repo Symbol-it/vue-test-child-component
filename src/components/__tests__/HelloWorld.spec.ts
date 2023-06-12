@@ -11,7 +11,7 @@ describe("HelloWorld", () => {
       global: {
         stubs: {
           Footer: {
-            template: "<div> stub footer</div>",
+            template: "<div>stub footer {{ myMsg}}</div>",
             props: ["myMsg"],
           },
         },
@@ -21,5 +21,6 @@ describe("HelloWorld", () => {
     expect(wrapper.findComponent(Footer).props("myMsg")).toContain(
       "Hello Vitest"
     );
+    expect(wrapper.findComponent(Footer).text()).toContain("Hello Vitest");
   });
 });
