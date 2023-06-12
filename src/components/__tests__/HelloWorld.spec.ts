@@ -12,13 +12,13 @@ describe("HelloWorld", () => {
         stubs: {
           Footer: {
             template: "<div> stub footer</div>",
-            props: ["msg"],
+            props: ["myMsg"],
           },
         },
       },
     });
     expect(wrapper.text()).toContain("Hello Vitest");
-    expect(wrapper.findComponent(Footer).props("msg")).toContain(
+    expect(wrapper.findComponent(Footer).props("myMsg")).toContain(
       "Hello Vitest"
     );
   });

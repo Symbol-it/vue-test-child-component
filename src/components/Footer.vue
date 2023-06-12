@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps<{
-  msg: string
+  myMsg: string
 }>()
 </script>
 <template>
-  <span id="footer">{{ msg }}</span>
+  <span id="footer">{{ myMsg }}</span>
 </template>
